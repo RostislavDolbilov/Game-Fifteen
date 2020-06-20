@@ -1,0 +1,16 @@
+*{margin: 0; padding: 0;}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+div{
+    box-sizing: border-box
+}
+
+.centered{
+    position: absolute;
+    left: 50%; top:  50%;
+    transform: translate(-50%, -50%)
+}
