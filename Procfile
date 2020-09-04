@@ -1,1 +1,0 @@
-web: node puzzle.js
