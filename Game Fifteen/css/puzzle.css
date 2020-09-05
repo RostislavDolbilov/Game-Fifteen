@@ -1,7 +1,5 @@
 @import "commons.css";
-    #root{
-        top: 60%;
-    }
+
     .container{
         position: relative;
         padding: 3px;
@@ -50,9 +48,7 @@
 
 
 @media screen and (orientation:portrait) {
-    #root{
-        top: 10vh;
-    }
+
     .container{
         position: relative;
         padding: 3px;
