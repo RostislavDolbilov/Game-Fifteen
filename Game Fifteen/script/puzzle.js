@@ -17,13 +17,9 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    sq.on('click', function(e) {
+    sq.addEventListener('click',function () {
         setTimeout(moving, timeOut * 1000000);
-    });
-    
-//     sq.addEventListener('click',function () {
-//         setTimeout(moving, timeOut * 1000000);
-//     }, false);
+    }, false);
 
     function moving(){
         let top = document.getElementById('16').style.top;
