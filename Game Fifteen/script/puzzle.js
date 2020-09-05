@@ -7,10 +7,6 @@ container.classList.add("container");
 container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
 
-let iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
-let touchEvent = 'click';
-if(iOS != null) touchEvent = 'touchstart';
-
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("button");
     let text = document.createElement("p");
@@ -20,13 +16,8 @@ for (let i = 0; i < 15; i++){
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
 
-    sq.addEventListener(touchEvent, function(){
-        setTimeout(moving, timeOut * 1000000);
-    }, false); 
-    
-    sq.addEventListener("transitionend", function () {
-        timeOut = 0;
-    });
+    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);    
+    sq.addEventListener("transitionend", event => {timeOut = 0;}, false);
   
     function moving(){
         let top = document.getElementById('16').style.top;
