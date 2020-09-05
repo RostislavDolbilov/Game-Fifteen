@@ -18,9 +18,13 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    sq.addEventListener(touchEvent, function () {
+    document.getElementById(sq.id).addEventListener(touchEvent, function () {
         setTimeout(moving, timeOut * 1000000);
-    }, false);
+    });
+    
+//     sq.addEventListener(touchEvent, function () {
+//         setTimeout(moving, timeOut * 1000000);
+//     }, false);
   
     function moving(){
         let top = document.getElementById('16').style.top;
