@@ -17,7 +17,7 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
 
-    sq.addEventListener('onclick',function () {
+    sq.addEventListener('click',function () {
         setTimeout(moving, timeOut * 1000000);
     });
 
