@@ -51,7 +51,7 @@
 
 @media screen and (orientation:portrait) {
     #root{
-        top: 30%;
+        top: 10vh;
     }
     .container{
         position: relative;
