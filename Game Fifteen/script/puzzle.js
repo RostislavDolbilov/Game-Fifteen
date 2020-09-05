@@ -19,13 +19,16 @@ for (let i = 0; i < 15; i++){
     sq.style.backgroundColor = 'white';
     sq.style.cursor = 'pointer';
     sq.onclick;
+    
+    sq.addEventListener(touchEvent, function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        setTimeout(moving, timeOut * 1000000);
+    }, false); 
+    
     sq.addEventListener("transitionend", function () {
         timeOut = 0;
     });
-    
-    sq.addEventListener(touchEvent, function(){
-        setTimeout(moving, timeOut * 1000000);
-    }, false);   
   
     function moving(){
         let top = document.getElementById('16').style.top;
