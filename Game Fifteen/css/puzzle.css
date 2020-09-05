@@ -92,7 +92,7 @@
     }
 }
 
-@media screen and (min-width: 2560px) and (orientation: landscape){
+@media screen and (min-width: 2500px){
     .container{
         position: relative;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
