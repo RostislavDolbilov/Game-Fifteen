@@ -1,6 +1,7 @@
 
 <!--Author Rostislav Dolbilov-->
 
+let step = window.innerWidth < window.innerHeight ? 15 : 10;
 let squares = [];
 let container = document.createElement("div");
 container.classList.add("container");
@@ -8,7 +9,7 @@ container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("button");
+    let sq = document.createElement("div");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
@@ -16,17 +17,17 @@ for (let i = 0; i < 15; i++){
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
 
-    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);    
-    sq.addEventListener("transitionend", event => {timeOut = 0;}, false);
-  
+    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
+    sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
+
     function moving(){
         let top = document.getElementById('16').style.top;
         let left = document.getElementById('16').style.left;
 
-        if ((sq.style.top === top && sq.style.left === (parseInt(left) - 10) + 'vw')
-            || (sq.style.top === top && sq.style.left === (parseInt(left) + 10) + 'vw')
-            || (sq.style.left === left && sq.style.top === (parseInt(top) - 10) + 'vw')
-            || (sq.style.left === left && sq.style.top === (parseInt(top) + 10) + 'vw')){
+        if ((sq.style.top === top && sq.style.left === (parseInt(left) - step) + 'vw')
+            || (sq.style.top === top && sq.style.left === (parseInt(left) + step) + 'vw')
+            || (sq.style.left === left && sq.style.top === (parseInt(top) - step) + 'vw')
+            || (sq.style.left === left && sq.style.top === (parseInt(top) + step) + 'vw')){
 
             timeOut = 0.2;
             sq.style.transitionDuration = timeOut + 's';
@@ -74,8 +75,8 @@ function getNodesByNewPosition() {
     for (let i = 0; i < 4; i++){
         for (let j = 0; j < 4; j++){
             for (let z = 0; z < 16; z++){
-                if (squares[z].style.left === 10 * i + "vw"
-                    && squares[z].style.top === 10 * j + "vw"){
+                if (squares[z].style.left === step * i + "vw"
+                    && squares[z].style.top === step * j + "vw"){
                     result.push(squares[z]);
                     break;
                 }
@@ -89,8 +90,8 @@ function displaySquares(){
     let index = 0;
     for (let i = 0; i < 4; i++){
         for (let j = 0; j < 4; j++){
-            squares[index].style.left = 10 * i + "vw";
-            squares[index].style.top = 10 * j + "vw";
+            squares[index].style.left = step * i + "vw";
+            squares[index].style.top = step * j + "vw";
             container.appendChild(squares[index]);
             index++;
         }
@@ -117,7 +118,5 @@ shuffle();
 root.appendChild(container);
 
 <!--Author Rostislav Dolbilov-->
-
-
 
 
