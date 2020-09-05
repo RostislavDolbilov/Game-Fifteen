@@ -18,7 +18,7 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    document.getElementById(sq.id).addEventListener(touchEvent, function () {
+    document.getElementById(sq.id).addEventListener('click', function () {
         setTimeout(moving, timeOut * 1000000);
     });
     
