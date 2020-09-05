@@ -18,9 +18,8 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    sq.addEventListener('click', function () {
-        setTimeout(moving, timeOut * 1000000);
-    }, false);
+    sq.addEventListener('click', click, false);   
+    sq.addEventListener ("touchstart", click, false);
   
     function moving(){
         let top = document.getElementById('16').style.top;
@@ -56,6 +55,8 @@ for (let i = 0; i < 15; i++){
     sq.appendChild(text);
     squares.push(sq);
 }
+
+function click(){ setTimeout(moving, timeOut * 1000000); }
 
 let sq = document.createElement("div");
 sq.classList.add("square");
