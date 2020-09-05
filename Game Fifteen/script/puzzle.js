@@ -16,7 +16,7 @@ for (let i = 0; i < 15; i++){
     sq.addEventListener("transitionend", function () {
         timeOut = 0;
     });
-    sq.addEventListener('touchstart', event => {
+    sq.addEventListener('touchenter', event => {
         setTimeout(moving, timeOut * 1000000);
     })
     sq.addEventListener('click',function () {
