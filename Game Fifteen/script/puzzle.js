@@ -16,6 +16,7 @@ for (let i = 0; i < 15; i++){
     sq.style.backgroundColor = 'white';
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
+    sq.onclick;
     
     sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
