@@ -6,7 +6,7 @@ let container = document.createElement("div");
 container.classList.add("container");
 container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
-let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
+// let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
 
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("div");
@@ -18,7 +18,7 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    sq.addEventListener(touchEvent, function () {
+    sq.addEventListener('click', function () {
         setTimeout(moving, timeOut * 1000000);
     }, false);
   
