@@ -16,29 +16,29 @@ for (let i = 0; i < 15; i++){
     sq.style.backgroundColor = 'white';
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
-    
-    sq.addEventListener('click', event => { setTimeout(moving, timeOut * 1000000); }, false);
+      
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
     
     function initialize() {
-      if (!is_ios()) return;
-
+      if (!is_ios()){
+          sq.addEventListener('click', event => { setTimeout(moving, timeOut * 1000000); }, false);
+          return;
+      }
+        
       let document_click_on_ios;
 
-      document.addEventListener('touchstart', () => {
+      sq.addEventListener('touchstart', () => {
         document_click_on_ios = true;
       });
 
-      document.addEventListener('touchmove', () => {
+      sq.addEventListener('touchmove', () => {
         // Don't regard it as a click event when the touched position moved
         document_click_on_ios = false;
       });
 
-      document.addEventListener('touchend', () => {
+      sq.addEventListener('touchend', () => {
         if (!document_click_on_ios) return;
         setTimeout(moving, timeOut * 1000000); 
-        // Write your onClick event handler
-        // console.log('document is clicked on iOS')
       });
     }
 
