@@ -21,11 +21,9 @@ for (let i = 0; i < 15; i++){
         setTimeout(moving, timeOut * 1000000);
     });
     
-sq.addEventListener('touchstart', function(event) {
-event.preventDefault();
-event.stopPropagation();
+sq.addEventListener('touchstart', function() {
 setTimeout(moving, timeOut * 1000000);
-}, false);
+});
 
     function moving(){
         let top = document.getElementById('16').style.top;
