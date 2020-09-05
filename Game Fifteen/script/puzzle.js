@@ -21,7 +21,7 @@ for (let i = 0; i < 15; i++){
         setTimeout(moving, timeOut * 1000000);
     });
     
-sq.addEventListener('touchstart', function() {
+container.addEventListener('touchstart', function() {
 setTimeout(moving, timeOut * 1000000);
 });
 
