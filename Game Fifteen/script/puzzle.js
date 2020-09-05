@@ -12,15 +12,13 @@ let timeOut;
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("div");
     let text = document.createElement("p");
-    text.style.cursor = 'pointer';     
-    text.style.padding = 4 + 'vw';
     sq.classList.add("square");
     sq.id = (i + 1).toString();
     sq.style.backgroundColor = 'white';
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
 
-    text.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
+    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
 
     function moving(){
