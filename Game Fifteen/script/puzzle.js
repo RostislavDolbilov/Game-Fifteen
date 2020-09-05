@@ -11,8 +11,8 @@ let timeOut;
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("div");
     let text = document.createElement("p");
-    text.style.cursor = 'pointer';
-//     text.style.padding = 4 + 'vw';
+    text.style.cursor = 'pointer';     
+    text.style.padding = 4 + 'vw';
     sq.classList.add("square");
     sq.id = (i + 1).toString();
     sq.style.backgroundColor = 'white';
