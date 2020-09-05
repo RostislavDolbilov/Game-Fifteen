@@ -95,10 +95,11 @@
 @media screen and (min-width: 2500px){
     .container{
         position: relative;
+        padding: 3px;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
         border-radius: 0.8vh;
-        width: 28.2vw;
-        height: 28.2vw;
+        width: 28.1vw;
+        height: 28.1vw;
     }
     .square{
         position: absolute;
