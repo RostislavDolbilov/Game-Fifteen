@@ -14,12 +14,13 @@ for (let i = 0; i < 15; i++){
     sq.classList.add("square");
     sq.id = (i + 1).toString();
     sq.style.backgroundColor = 'white';
+    sq.style.cursor = 'pointer';
     sq.addEventListener("transitionend", function () {
         timeOut = 0;
     });
     
     sq.addEventListener('click', click, false);   
-    sq.addEventListener ("touchstart", click, false);
+    sq.addEventListener ('touchstart', click, false);
     
     function click(){ setTimeout(moving, timeOut * 1000000); }
   
