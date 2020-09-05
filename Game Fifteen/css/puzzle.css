@@ -92,7 +92,7 @@
     }
 }
 
-@media screen and (max-height: 1440px) and (min-width: 2400px){
+@media screen and (width: 2560px){
     .container{
         position: relative;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
