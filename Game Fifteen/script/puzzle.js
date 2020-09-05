@@ -9,12 +9,13 @@ let timeOut;
 // let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("div").onclick;
+    let sq = document.createElement("div");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
     sq.style.backgroundColor = 'white';
     sq.style.cursor = 'pointer';
+    sq.onclick;
     sq.addEventListener("transitionend", function () {
         timeOut = 0;
     });
