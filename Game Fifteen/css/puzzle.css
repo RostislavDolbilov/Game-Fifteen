@@ -113,9 +113,9 @@
         position: relative;
         outline: none;
         margin-bottom: 1vh;
-        left: 10.1vw;
-        width: 20vw;
-        height: 3vw;
+        left: 5vw;
+        width: 10vw;
+        height: 2vw;
         font-size: 2.5vh;
         color: rgba(0, 0, 0, 0.56);
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
@@ -123,8 +123,8 @@
     }
     #won{
         position: absolute;
-        top: 43.5vw;
-        width: 40.2vw;
+        top: 33.5vw;
+        width: 28.1vw;
         height: 4vw;
         padding-top: 1vw;
         text-align: center;
