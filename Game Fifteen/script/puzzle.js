@@ -6,7 +6,7 @@ let container = document.createElement("div");
 container.classList.add("container");
 container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
-let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
 
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("div");
@@ -18,13 +18,9 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    document.getElementById(sq.id).addEventListener('click', function () {
+    sq.addEventListener(touchEvent, function () {
         setTimeout(moving, timeOut * 1000000);
-    });
-    
-//     sq.addEventListener(touchEvent, function () {
-//         setTimeout(moving, timeOut * 1000000);
-//     }, false);
+    }, false);
   
     function moving(){
         let top = document.getElementById('16').style.top;
