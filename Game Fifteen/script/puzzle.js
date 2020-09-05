@@ -1,12 +1,15 @@
 
 <!--Author Rostislav Dolbilov-->
 
-let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
+let iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+let touchEvent = 'click';
 let squares = [];
 let container = document.createElement("div");
 container.classList.add("container");
 container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
+
+if(iOS != null) touchEvent = "touchstart";
 
 for (let i = 0; i < 15; i++){
     let sq = document.createElement("div");
