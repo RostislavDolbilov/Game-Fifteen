@@ -9,7 +9,7 @@ let timeOut;
 // let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("button");
+    let sq = document.createElement("textarea");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
@@ -18,7 +18,7 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
     
-    sq.addEventListener('onclick', function () {
+    sq.addEventListener('click', function () {
         setTimeout(moving, timeOut * 1000000);
     }, false);
   
