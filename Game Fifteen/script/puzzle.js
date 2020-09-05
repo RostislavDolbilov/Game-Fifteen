@@ -2,7 +2,7 @@
 <!--Author Rostislav Dolbilov-->
 
 let step = window.innerWidth < window.innerHeight ? 15 : 10;
-if(window.innerWidth/window.innerHeight > 2) step = 7;
+if(window.innerWidth > 2500) step = 7;
 let squares = [];
 let container = document.createElement("div");
 container.classList.add("container");
