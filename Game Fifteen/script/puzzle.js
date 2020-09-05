@@ -17,10 +17,11 @@ for (let i = 0; i < 15; i++){
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
 
-    sq.addEventListener('click', event => {
-        onclick = "void(0)" >
+    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
+    sq.addEventListener('touchstart', function(e){
+        e.preventDefault()
         setTimeout(moving, timeOut * 1000000);
-        }, false);
+    }, false)
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
 
     function moving(){
