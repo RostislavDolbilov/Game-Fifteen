@@ -9,7 +9,7 @@ let timeOut;
 // let touchEvent = 'ontouchstart' in window ? 'touchenter' : 'click';
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("div");
+    let sq = document.createElement("button");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
