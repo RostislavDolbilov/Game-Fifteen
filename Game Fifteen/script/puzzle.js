@@ -17,8 +17,20 @@ for (let i = 0; i < 15; i++){
     sq.style.cursor = 'pointer';
     sq.style.userSelect = 'none';
 
-    sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
+//     sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
+    
+    let iOS = navigator.userAgent.match(/iPhone|iPad|iPod/i);
+let event = "click";
+
+if(iOS != null)
+    event = "touchstart";
+
+$(function() {
+    $(document).on(event, ".element_class", function(e) {
+    	setTimeout(moving, timeOut * 1000000);
+    });
+});
 
     function moving(){
         let top = document.getElementById('16').style.top;
