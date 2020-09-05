@@ -3,13 +3,13 @@
 
 let step = window.innerWidth < window.innerHeight ? 15 : 10;
 let squares = [];
-let container = document.createElement("button");
+let container = document.createElement("div");
 container.classList.add("container");
 container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("div");
+    let sq = document.createElement("button");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
