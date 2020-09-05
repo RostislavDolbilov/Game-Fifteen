@@ -9,7 +9,7 @@ container.style.backgroundColor = 'rgba(236,172,69,0.75)';
 let timeOut;
 
 for (let i = 0; i < 15; i++){
-    let sq = document.createElement("div");
+    let sq = document.createElement("button");
     let text = document.createElement("p");
     sq.classList.add("square");
     sq.id = (i + 1).toString();
@@ -18,35 +18,35 @@ for (let i = 0; i < 15; i++){
     sq.style.userSelect = 'none';
       
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
-    
-    function initialize() {
-      if (!is_ios()){
-          sq.addEventListener('click', event => { setTimeout(moving, timeOut * 1000000); }, false);
-          return;
-      }
+    sq.addEventListener('click', event => { setTimeout(moving, timeOut * 1000000); }, false);
+//     function initialize() {
+//       if (!is_ios()){
+          
+//           return;
+//       }
         
-      let document_click_on_ios;
+//       let document_click_on_ios;
 
-      sq.addEventListener('touchstart', () => {
-        document_click_on_ios = true;
-      });
+//       sq.addEventListener('touchstart', () => {
+//         document_click_on_ios = true;
+//       });
 
-      sq.addEventListener('touchmove', () => {
-        // Don't regard it as a click event when the touched position moved
-        document_click_on_ios = false;
-      });
+//       sq.addEventListener('touchmove', () => {
+//         // Don't regard it as a click event when the touched position moved
+//         document_click_on_ios = false;
+//       });
 
-      sq.addEventListener('touchend', () => {
-        if (!document_click_on_ios) return;
-        setTimeout(moving, timeOut * 1000000); 
-      });
-    }
+//       sq.addEventListener('touchend', () => {
+//         if (!document_click_on_ios) return;
+//         setTimeout(moving, timeOut * 1000000); 
+//       });
+//     }
 
-    function is_ios () {
-      return navigator.userAgent && navigator.userAgent.match(/iPhone|iPad|iPod/);
-    }
+//     function is_ios () {
+//       return navigator.userAgent && navigator.userAgent.match(/iPhone|iPad|iPod/);
+//     }
 
-    initialize();
+//     initialize();
    
 
     function moving(){
