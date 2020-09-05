@@ -1,10 +1,6 @@
 
 <!--Author Rostislav Dolbilov-->
 
-if (gravdept.isIos()) {
-    document.querySelector('html').classList.add('is-ios');
-}
-
 let squares = [];
 let container = document.createElement("div");
 container.classList.add("container");
