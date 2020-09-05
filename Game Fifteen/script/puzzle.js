@@ -20,7 +20,7 @@ for (let i = 0; i < 15; i++){
     sq.addEventListener('click', event => {setTimeout(moving, timeOut * 1000000);}, false);
     sq.addEventListener('touchstart', function(e){
         e.preventDefault()
-        setTimeout(moving);
+        moving();
     }, false)
     sq.addEventListener('transitionend', event => {timeOut = 0;}, false);
 
