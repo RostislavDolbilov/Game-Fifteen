@@ -4,6 +4,7 @@
     }
     .container{
         position: relative;
+        padding: 3px;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
         border-radius: 0.8vh;
         width: 40.2vw;
@@ -54,6 +55,7 @@
     }
     .container{
         position: relative;
+        padding: 3px;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
         border-radius: 0.8vh;
         width: 60.6vw;
