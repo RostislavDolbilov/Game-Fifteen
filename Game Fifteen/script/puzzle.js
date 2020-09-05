@@ -17,13 +17,9 @@ for (let i = 0; i < 15; i++){
         timeOut = 0;
     });
 
-    sq.addEventListener('click',function () {
+    sq.addEventListener('onclick',function () {
         setTimeout(moving, timeOut * 1000000);
     });
-    
-container.addEventListener('touchstart', function() {
-setTimeout(moving, timeOut * 1000000);
-});
 
     function moving(){
         let top = document.getElementById('16').style.top;
