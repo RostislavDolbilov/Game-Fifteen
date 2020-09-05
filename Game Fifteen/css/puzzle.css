@@ -1,5 +1,7 @@
 @import "commons.css";
-
+    #root{
+        top: 60%;
+    }
     .container{
         position: relative;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
