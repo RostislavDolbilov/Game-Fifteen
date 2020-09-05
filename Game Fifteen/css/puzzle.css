@@ -15,7 +15,6 @@
         height: 10vw;
         text-align: center;
         font-size: 2vw;
-        padding: 4vw 4vw;
         color: rgba(0, 0, 0, 0.56);
     }
     #start{
@@ -66,7 +65,7 @@
         height: 15vw;
         text-align: center;
         font-size: 2vw;
-        padding: 6vw 6vw;
+        padding: 1vw 1vw;
         color: rgba(0, 0, 0, 0.56);
     }
     #start{
