@@ -96,8 +96,8 @@
         position: relative;
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
         border-radius: 0.8vh;
-        width: 28.3vw;
-        height: 28.3vw;
+        width: 28.1vw;
+        height: 28.1vw;
     }
     .square{
         position: absolute;
@@ -109,13 +109,13 @@
         font-size: 2vw;
         color: rgba(0, 0, 0, 0.56);
     }
-    #start{
+     #start{
         position: relative;
         outline: none;
         margin-bottom: 1vh;
         left: 10.1vw;
-        width: 40vw;
-        height: 8vw;
+        width: 20vw;
+        height: 3vw;
         font-size: 2.5vh;
         color: rgba(0, 0, 0, 0.56);
         border: 0.2vh solid rgba(0, 0, 0, 0.56);
@@ -123,11 +123,12 @@
     }
     #won{
         position: absolute;
-        top: 73.5vw;
-        width: 60.2vw;
-        height: 9vw;
+        top: 43.5vw;
+        width: 40.2vw;
+        height: 4vw;
         padding-top: 1vw;
         text-align: center;
         font-size: 2.5vh;
     }
+
 }
